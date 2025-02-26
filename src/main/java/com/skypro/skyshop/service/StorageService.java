@@ -43,10 +43,8 @@ public class StorageService {
 
 
     public Collection<Searchable> getSearchables() {
-        List<Searchable> searchables = new ArrayList<>();
-        searchables.addAll(this.products.values());
-        searchables.addAll(this.articles.values());
-        return searchables;
+        return Stream.concat(getArticles().stream(),getProducts().stream())
+                .collect(Collectors.toList());
     }
 
 
