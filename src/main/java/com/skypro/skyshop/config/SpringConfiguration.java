@@ -1,4 +1,4 @@
-package com.skypro.skyshop;
+package com.skypro.skyshop.config;
 
 import com.skypro.skyshop.model.basket.ProductBasket;
 import org.springframework.context.annotation.Bean;
