@@ -47,6 +47,10 @@ public class StorageService {
                 .collect(Collectors.toList());
     }
 
+    public Optional<Product> getProductById(UUID id) {
+        return Optional.ofNullable(products.get(id));
+    }
+
 
 
     private static void safelyCreateProduct(String name, int price, int discount, UUID id, Map<UUID, Product> products) {
