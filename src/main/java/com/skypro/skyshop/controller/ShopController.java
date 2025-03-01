@@ -8,7 +8,6 @@ import com.skypro.skyshop.service.BasketService;
 import com.skypro.skyshop.service.SearchService;
 import com.skypro.skyshop.service.StorageService;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -42,10 +41,6 @@ public class ShopController {
         return searchService.search(pattern);
     }
 
-    @GetMapping("/basket/{id}")
-    public String addProduct(@PathVariable("id") UUID id){
-        return basketService.putProductInBasket(id);
-    }
     @GetMapping("/basket")
     public UserBasket getUserBasket(){
         return basketService.getUserBasket();
