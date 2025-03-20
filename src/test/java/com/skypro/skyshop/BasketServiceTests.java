@@ -77,7 +77,6 @@ public class BasketServiceTests {
         Mockito.when(storageService.getProductById(item3.getProduct().getId())).thenReturn(Optional.of(product3));
 
         Assertions.assertEquals(testUserBasket, basketService.getUserBasket());
-
     }
 
 }
